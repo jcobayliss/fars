@@ -13,7 +13,7 @@ fars_read(filename)
 A data frame table.
 }
 \description{
-Reads a delimited csv file specified by \code{filenME}into a data frame table that wraps the local data frame.
+Reads a delimited csv file specified by \code{filename}into a data frame table that wraps the local data frame.
 }
 \examples{
 fars_read('Table.csv')

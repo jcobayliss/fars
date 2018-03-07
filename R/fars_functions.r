@@ -1,6 +1,6 @@
 #' Reads a delimited csv file into a data frame table
 #'
-#' Reads a delimited csv file specified by \code{filenME}into a data frame table that wraps the local data frame.
+#' Reads a delimited csv file specified by \code{filename}into a data frame table that wraps the local data frame.
 #'
 #' @importFrom dplyr tbl_df
 #' @importFrom readr read_csv
@@ -100,10 +100,7 @@ fars_summarize_years <- function(years) {
 #'
 #' Returns a plot of the accidents based on the \code{state.num} and \code{year} inputs. Returns an error if the state or year do not exist in the data set.
 #'
-#' @importFrom dplyr bind_rows
-#' @importFrom dplyr group_by
-#' @importFrom dplyr summarize
-#' @importFrom tidyr spread
+#' @importFrom dplyr filter
 #'
 #' @param state.num The number of the state to analyze.
 #' @param year The year to analyze.
