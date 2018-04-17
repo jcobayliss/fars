@@ -7,7 +7,6 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-
 ```{r, echo = FALSE, include = FALSE}
 library(fars)
 library(dplyr)
@@ -20,31 +19,26 @@ This vignette provides a brief overview of the FARS package.
 
 The functions available to users are described below:
 
-- `fars_summarize_years()`
-- `fars_map_state()`
-
 ### fars_read
 
-The function `fars_read()` provides a way how to read data from a file path provided as an argument. It returns a `tibble` with loaded data:
+Reads a delimited csv file into a data frame table
 
 **Examples**
 
  `fars_read("accident_2013.csv.bz2")`
 
-## Summarize number of accidents
+### fars_summarize_years
 
-The next function `fars_summarize_years()` takes a vector or list of years (numeric/integer values) as an argument and if the corresponding files with data are available, it returns a pivot table with number of accidents per year and month. The data files need to be located in the working directory.
+Counts the number of accidents per month in a given range of years.
 
 **Examples**
 
  `fars_summarize_years("2015")`
  
-## Plot accident locations
+### fars_map_state
 
-The last function available in the package, `fars_map_state()` takes a state index and year as arguments and returns a plot of the state with accident locations. The state indices need to correspond available indeces from the data set. Here are some examples:
+Plots the accidents of one specific state and a range of years.
 
 **Examples**
 
   `fars_map_state(1,2013)`
-  
-Note that the data file needs to be present in the working directory. 
