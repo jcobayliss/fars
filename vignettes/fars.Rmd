@@ -1,7 +1,5 @@
 ---
-title: "Overview of the fars package"
-author: "Susmit Sarker"
-date: "MAR-28-2018"
+title: "The fars package"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Overview of the fars package}
@@ -16,19 +14,16 @@ library(dplyr)
 library(maps)
 ```
 
-This vignette gives a brief overview of the FARS package functionality. The package contains a set of functions suited for analysis of data from FARS - Fatality Analysis Reporting System. FARS is a nationwide census providing NHTSA, Congress and the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. [[1](http://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS))]
+This vignette provides a brief overview of the FARS package.
 
-## Package functions
+## Functions
 
-There are three exported functions available to users:
+The functions available to users are described below:
 
-- `fars_read()`
 - `fars_summarize_years()`
 - `fars_map_state()`
 
-Further we give a short description with examples how to use the functions. For the purposes of these examples we will use data from FARS, years 2013-2015, that can be found in the package directory under `\extdata` folder.
-
-## Read FARS data files
+### fars_read
 
 The function `fars_read()` provides a way how to read data from a file path provided as an argument. It returns a `tibble` with loaded data:
 
